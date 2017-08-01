@@ -20,7 +20,7 @@ function processData(input) {
      let snakes = []
   if (m<=n) {
     maxSnakes = Math.floor(m/2)
-  } else if (m>n) {
+  } else {
     maxSnakes = Math.floor(n/2)
   }
   for (let si=0; si<maxSnakes; si++) {
@@ -44,14 +44,14 @@ function processData(input) {
 //  console.log(snakes)
 
   snakes = snakes.map((snake, index, list)=>{
-    if (r>snake.length) {
+    if (r>=snake.length) {
       rSnake = r % snake.length
     } else {
       rSnake = r
     }
 
     snake = snake.map((item, i, list)=>{
-      let newI = i + r
+      let newI = i + rSnake
       if (newI>list.length-1) 
         newI = newI % list.length
       return list[newI]
@@ -95,4 +95,5 @@ process.stdin.on("data", function (input) {
 process.stdin.on("end", function () {
    processData(_input);
 });
+
 ```
