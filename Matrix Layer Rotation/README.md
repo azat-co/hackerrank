@@ -6,7 +6,7 @@ Test Case #4 and Test Case #5 are failing out of 12.
 
 [Input for Test Case #4](https://hr-testcases-us-east-1.s3.amazonaws.com/8965/input04.txt?AWSAccessKeyId=AKIAJ4WZFDFQTZRGO3QA&Expires=1501612821&Signature=2LuG%2BNorKrSQgczmAyqTxAkHivs%3D&response-content-type=text%2Fplain)
 
-```
+```js
 function processData(input) {
     //Enter your code here
   let lines = input.split('\n')
